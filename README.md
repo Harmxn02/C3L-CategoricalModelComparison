@@ -3,8 +3,8 @@
 This repository contains the code to compare several training techniques for a NIDS. The techniques are:
 
 1. Training a model on only attack data
-1. Training a model on only DOS attacks
-1. Training a model on only WebAttack attacks
+1. Training a model where we focus on DOS attacks, and combine all other attacks into one class
+1. Training a model where we focus on WebAttack attacks, and combine all other attacks into one class
 
 ## Data
 
