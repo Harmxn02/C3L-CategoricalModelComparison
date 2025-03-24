@@ -1,0 +1,4 @@
+models/old/1_only_attacks.pth
+
+# All .csv files
+*.csv
