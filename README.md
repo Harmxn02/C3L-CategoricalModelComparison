@@ -90,3 +90,91 @@ Classification Report:
 2. The model where we focus on DOS attacks performs very good. It has a 99% accuracy, and a 99% macro average accuracy. This model is very good at detecting DOS attacks, and also performs well on detecting "Others".
 
 3. The model where we focus on WebAttack attacks performs the worst. It has a 77% accuracy, and a 73% macro average accuracy. This model is not able to detect WebAttack attacks very well, but it can detect "Others" quite well.
+
+### Focus on DoS
+
+Here is the direct comparison of the evaluation of DoS attacks in either the first model or the model where we focus on DoS attacks.
+
+#### DoS Hulk
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 237, 38)">Equal</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 1.00      | 0.99   | 1.00     | 200     |
+| DoS   | 0.99      | 0.99   | 0.99     | 200     |
+
+#### DDos
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 237, 38)">Equal</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 1.00      | 1.00   | 1.00     | 200     |
+| DoS   | 1.00      | 0.99   | 1.00     | 200     |
+
+#### DoS GoldenEye
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(38, 255, 38)">Better</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 0.76      | 1.00   | 0.86     | 200     |
+| DoS   | 1.00      | 1.00   | 1.00     | 200     |
+
+#### DoS slowloris
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 237, 38)">Equal</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 1.00      | 1.00   | 1.00     | 200     |
+| DoS   | 0.99      | 0.98   | 0.98     | 200     |
+
+#### DoS Slowhttptest
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 237, 38)">Equal</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 1.00      | 0.99   | 1.00     | 200     |
+| DoS   | 0.99      | 0.99   | 0.99     | 200     |
+
+### Focus on WebAttack
+
+Here is the direct comparison of the evaluation of WebAttack attacks in either the first model or the model where we focus on WebAttack attacks.
+
+#### Web Attack – Brute Force
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 71, 38)">Worse</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 0.94      | 0.15   | 0.26     | 200     |
+| Web   | 0.64      | 0.18   | 0.28     | 200     |
+
+#### Web Attack – XSS
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(255, 237, 38)">Equally bad</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 0.56      | 0.98   | 0.71     | 200     |
+| Web   | 0.54      | 0.90   | 0.67     | 200     |
+
+#### Web Attack – SQL Injection
+
+<!-- markdownlint-disable MD033 -->
+<p style="font-weight: bold;">Performance: <span style="color:rgb(38, 255, 38)">Better</span></p>
+
+| Model | Precision | Recall | F1-Score | Support |
+| ----- | --------- | ------ | -------- | ------- |
+| All   | 0.92      | 0.71   | 0.80     | 200     |
+| Web   | 0.94      | 1.00   | 0.97     | 200     |
